@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HGNN Youth · Weekly</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+<style>
+	* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  padding: 16px 16px 60px;
+}
+
+/* 비전 배너 */
+.vision {
+  margin: -16px -16px 24px;
+  border-radius: 0 0 24px 24px;
+  overflow: hidden;
+}
+
+.vision img {
+  width: 100%;
+  display: block;
+}
+
+/* 헤더 */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.week {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* 말씀 카드 */
+.hero {
+  background: linear-gradient(135deg, #ff8a3d, #ffd2a8);
+  border-radius: 24px;
+  padding: 24px;
+  color: #5a2a00;
+  margin-bottom: 24px;
+}
+
+.hero-label {
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.hero-title {
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 10px 0;
+}
+
+.hero-meta {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* 카드 */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+.card h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* 예배 흐름 */
+.flow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.flow li {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 공지 */
+.notice {
+  list-style: none;
+  padding: 0;
+}
+
+.notice li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.notice li:last-child {
+  border-bottom: none;
+}
+
+/* 다음주 */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.grid div {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.grid span {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+/* 푸터 */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- 2026 비전 -->
+  <section class="vision">
+    <img src="./resource/img/visual.jpg" alt="2026년 청소년부 표어">
+  </section>
+
+  <header class="app-header">
+    <div class="logo">HGNN Youth</div>
+    <div class="week">2026.01.18</div>
+  </header>
+
+  <!-- 이번주 말씀 -->
+  <section class="hero">
+    <p class="hero-label">이번 주 말씀</p>
+    <h1 class="hero-title">하나님의 영성</h1>
+    <p class="hero-meta">창세기 13:7 · 윤수환 전도사</p>
+  </section>
+
+  <!-- 예배 순서 -->
+  <section class="card">
+    <h2>예배 순서</h2>
+    <ul class="flow">
+      <li>사도신경</li>
+      <li>경배와 찬양</li>
+      <li>기도 · 백경민</li>
+      <li>성경봉독</li>
+      <li>설교</li>
+      <li>결단찬양</li>
+      <li>봉헌</li>
+      <li>파송</li>
+    </ul>
+  </section>
+
+  <!-- 공지 -->
+  <section class="card">
+    <h2>이번주 안내</h2>
+    <ul class="notice">
+      <li>예배 후 1월 생일파티가 있습니다 🎉</li>
+      <li>생파 후 반별 공과가 있습니다</li>
+      <li>차량운행 10:10 출발</li>
+      <li>필요한 친구는 이규환 선생님께</li>
+    </ul>
+  </section>
+
+  <!-- 다음주 -->
+  <section class="card">
+    <h2>다음주 예배 위원</h2>
+    <div class="grid">
+      <div><span>사회</span>최해원</div>
+      <div><span>기도</span>최성민</div>
+      <div><span>헌금</span>김은솔</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Copyright © 2026 향기나는교회 청소년부
+  </footer>
+
+</div>
+
+</body>
+</html>
