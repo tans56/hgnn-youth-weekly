@@ -1,0 +1,126 @@
+@use "sass:math";
+
+//색상 변수
+$color-primary-300: #87AED9;
+$color-primary-500: #2348A3;
+$color-primary-800: #001168;
+$color-secondary-300: #F6E3E9;
+$color-secondary-500: #D90D66;
+$color-secondary-800: #A91455;
+
+$color-cyan: #38A4DD;
+$color-cyan-icon: #83CCF3;
+$color-cyan-bg: #E7F4FB;
+
+$color-hover: #F6FAFD;
+
+$color-realblack: #000;
+$color-realwhite: #fff;
+$color-black: #111111;
+$color-semiblack: #333333;
+
+$color-gray-50: #E8E8E8;
+$color-gray-100: #D8D8D8;
+$color-gray-200: #CCCCCC;
+$color-gray-300: #A2A2A2;
+$color-gray-400: #999999;
+$color-gray-500: #666666;
+$color-gray-600: #545456;
+$color-gray-800: #333333;
+$color-gray-900: #111111;
+
+$color-gray-line: #DDDDDD;
+
+$color-gray-bg-10: #FAFAFB;
+$color-gray-bg-20: #F5F5F5;
+$color-gray-bg-30: #EEEEEE;
+$color-blue-bg-10: #F5F6F9;
+$color-blue-bg-20: #F1F6FC;
+$color-blue-bg-30: #E0EAF8;
+
+$color-box-bg-10: #ECEFF6;
+$color-box-bg-20: #E9EAF5;
+$color-box-bg-30: #ECE9F5;
+$color-box-bg-40: #EAE4F2;
+
+$color-danger: #EB003B;
+$color-success: #008A1E;
+$color-warning: #FFB724;
+$color-infomation: #2768FF;
+
+//글자크기 변수
+$tit-sizes: (
+	depth1: 5rem,
+	depth2: 4rem,
+	depth3: 3rem,
+	depth4: 2.6rem,
+	depth5: 2.4rem,
+	depth1-t: 4rem,
+	depth2-t: 3.2rem,
+	depth3-t: 2.7rem,
+	depth4-t: 2.5rem,
+	depth5-t: 2.3rem,
+	depth1-m: 3.2rem,
+	depth2-m: 2.8rem,
+	depth3-m: 2.6rem,
+	depth4-m: 2.2rem,
+	depth5-m: 2rem,
+);
+
+$stit-sizes: (
+	depth1: 2rem,
+	depth2: 1.8rem,
+	depth3: 1.7rem,
+	depth1-t: 1.8rem,
+	depth2-t: 1.7rem,
+	depth3-t: 1.5rem,
+	depth1-m: 1.7rem,
+	depth2-m: 1.5rem,
+	depth3-m: 1.4rem,
+);
+
+$txt-sizes: (
+	depth1: 1.8rem,
+	depth2: 1.7rem,
+	depth1-t: 1.7rem,
+	depth2-t: 1.6rem,
+	depth1-m: 1.5rem,
+	depth2-m: 1.4rem,
+);
+
+$caption-sizes: (
+	depth1: 1.6rem,
+	depth2: 1.5rem,
+	depth1-t: 1.5rem,
+	depth2-t: 1.4rem,
+	depth1-m: 1.4rem,
+	depth2-m: 1.3rem,
+);
+
+// 크기 관련 변수
+$rdo-size: 20px;
+$rdo-chk: 8px;
+$chk-size: 20px;
+$chk-primary-chk: 12px;
+
+// 여백
+$spacer-1: 4px;
+$spacer-2: 8px;
+$spacer-3: 16px;
+$spacer-4: 24px;
+
+// 공통 스타일
+$rd-full: 50%;
+$rd-4: 4px;
+
+$container-width: 151.2rem;
+$container-padding: 1.6rem;
+$header-height: 12rem;
+
+// 반전된 둥근 모서리 마크스 변수
+$corner-cut-positions: ( //위치
+  top-left: 0 0,
+  top-right: 100% 0,
+  bottom-left: 0 100%,
+  bottom-right: 100% 100%
+);

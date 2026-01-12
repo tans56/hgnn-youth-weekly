@@ -1,0 +1,52 @@
+@charset 'UTF-8';
+@use 'bar' as *;
+@use 'mixin' as *;
+
+/* === 공통: 테이블 외곽 === */
+.table-scroll{ width: 100%; overflow-x: visible; 
+	@include res798{ overflow-x: auto; -webkit-overflow-scrolling: touch;
+		&::-webkit-scrollbar {
+			width: 3px; /* 세로축 스크롤바 폭 너비 */
+			height: 3px; /* 가로축 스크롤바 폭 너비 */
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #555555;
+			border-radius: 999px;
+		}
+		&::-webkit-scrollbar-track {
+			background: #E0E3E5;
+		}
+	}
+}
+
+.table-wrap{ width: 100%;
+	&:has(.table-basic:not(.table-res)){
+		@include res798{ min-width: 100rem;}
+	}
+}
+
+/* === 기본 공통: 헤더/셀 === */
+.table-basic{ width: 100%; border-top: 2px solid $color-black; border-collapse: collapse; color: $color-black;
+	th, td{ padding: 2rem 0.8rem; border-bottom: 1px solid $color-gray-line; text-align: center;
+		@include res798{ padding: 1.5rem 1.6rem;}
+	}
+	thead{
+		th{ border-bottom: none; border-bottom: 1px solid $color-gray-line; background-color: $color-gray-bg-10;}
+	}
+	tbody{
+		th{ border-right: 1px solid $color-gray-line; background-color: $color-realwhite;}
+	}
+	th{ @include subtitle-style(depth3,600,1.5);}
+	td{ background-color: $color-realwhite; color: $color-gray-500; @include text-style(depth2,400,1.6);}
+}
+
+/* === table-row: 행기준 기본 테이블 커스텀 === */
+.table-basic{
+	&.table-row{
+		tr{ background-color: $color-realwhite;}
+		th{ background-color: $color-gray-bg-10; font-weight: 400; color: $color-black; vertical-align: middle; white-space: nowrap;
+			&.ta_l{ text-align: left;}
+		}
+		td{ text-align: left; vertical-align: middle;}
+	}
+}

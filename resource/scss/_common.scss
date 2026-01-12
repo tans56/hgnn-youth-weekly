@@ -1,0 +1,310 @@
+@charset 'UTF-8';
+@use 'bar' as *;
+@use 'mixin' as *;
+
+body.is-locked {
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+}
+
+.hidden{ @include pos(absolute, $t: -9999px, $l: -9999px);}
+.hide{ @include pos(absolute, $t: -9999px, $l: -9999px);}
+
+.sr-only{ @include sr-only;}
+
+.pc-only{ display: block;
+	@include res1024{ display: none;}
+}
+.pc-tablet-only{ display: block;
+	@include res798{ display: none;}
+}
+.tablet-only{ display: none;
+	@include res1024{ display: block;}
+	@include res798{ display: none;}
+}
+.mo-tablet-only{ display: none;
+	@include res1024{ display: block;}
+	@include res798{ display: block;}
+}
+.mo-only{ display: none;
+	@include res798{ display: block;}
+}
+
+.flex{
+    @include d-flex;
+}
+
+/* 폰트 컬러 */
+.color{
+	&-primary{ color: $color-primary-500;
+		&1{ color: $color-primary-300;}
+		&2{ color: $color-primary-500;}
+		&3{ color: $color-primary-800;}
+	}
+	&-secondary{ color: $color-secondary-500;
+		&1{ color: $color-secondary-300;}
+		&2{ color: $color-secondary-500;}
+		&3{ color: $color-secondary-800;}
+	}
+	&-gray{ color: $color-gray-500;
+		&-50{ color: $color-gray-50;}
+		&-100{ color: $color-gray-100;}
+		&-200{ color: $color-gray-200;}
+		&-300{ color: $color-gray-300;}
+		&-400{ color: $color-gray-400;}
+		&-500{ color: $color-gray-500;}
+		&-600{ color: $color-gray-600;}
+		&-800{ color: $color-gray-800;}
+	}
+	&-realwhite{ color: $color-realwhite;}
+	&-semiblack{ color: $color-semiblack;}
+	&-cyan{ color: $color-cyan;}
+}
+
+/* 배경 컬러 */
+.bg{
+	&-primary{ background-color: $color-primary-500;
+		&-300{ background-color: $color-primary-300;}
+		&-500{ background-color: $color-primary-500;}
+		&-800{ background-color: $color-primary-800;}
+	}
+	&-secondary{ background-color: $color-secondary-500;
+		&-300{ background-color: $color-secondary-300;}
+		&-500{ background-color: $color-secondary-500;}
+		&-800{ background-color: $color-secondary-800;}
+	}
+    &-gray{ background-color: $color-gray-bg-20;
+		&-10{ background-color: $color-gray-bg-10;}
+		&-20{ background-color: $color-gray-bg-20;}
+		&-30{ background-color: $color-gray-bg-30;}
+	}
+	&-realwhite{ background-color: $color-realwhite;}
+	&-blue{ background-color: $color-blue-bg-20;
+		&-10{ background-color: $color-blue-bg-10;}
+		&-20{ background-color: $color-blue-bg-20;}
+		&-30{ background-color: $color-blue-bg-30;}
+	}
+	&-box-10{ background-color: $color-box-bg-10;}
+	&-box-20{ background-color: $color-box-bg-20;}
+	&-box-30{ background-color: $color-box-bg-30;}
+	&-box-40{ background-color: $color-box-bg-40;}
+
+	&-cyan-icon{ background-color: $color-cyan-icon;}
+	&-cyan{ background-color: $color-cyan-bg;}
+}
+
+/* 폰트 사이즈 */
+.tit{
+    &_01{ @include title-style(depth1,600,1.3); letter-spacing: -0.03em;}
+    &_02{ @include title-style(depth2,600,1.4); letter-spacing: -0.03em;}
+    &_03{ @include title-style(depth3,600,1.5);}
+    &_04{ @include title-style(depth4,600,1.5);}
+    &_05{ @include title-style(depth5,600,1.5);}
+}
+.subtit{
+	&_01{ @include subtitle-style(depth1,600,1.5);}
+	&_02{ @include subtitle-style(depth2,600,1.5);}
+	&_03{ @include subtitle-style(depth3,600,1.5);}
+}
+.txt{
+    &_01{ @include text-style(depth1,400,1.6);}
+    &_02{ @include text-style(depth2,400,1.6);}
+}
+.caption{
+    &_01{ @include caption-style(depth1,500,1.6);}
+    &_02{ @include caption-style(depth2,400,1.6);}
+}
+
+/* 폰트 두께 */
+.fw-300{ font-weight: 300;}
+.fw-400{ font-weight: 400;}
+.fw-500{ font-weight: 500;}
+.fw-600{ font-weight: 600;}
+.fw-700{ font-weight: 700;}
+
+/* essential */
+.essential{ @include pos($p: relative, $t: -.8rem); color: $color-primary-500; @include text-style(depth1,600,1.5);}
+
+/* 글자 정렬 */
+.ta-c{ text-align: center;}
+.ta-l{ text-align: left;}
+.ta-r{ text-align: right;}
+.keep-all{ word-break: keep-all;
+	&-pretty{ word-break: keep-all; text-wrap-style: pretty;}
+	&-balance{ word-break: keep-all; text-wrap-style: balance;}
+}
+
+/* list 스타일 */
+.lists{
+    li{
+        position: relative;
+        &:before{
+            content:'';
+			position: absolute;
+            left:0;
+        }
+        & + li{
+            margin-top: .4rem;
+        }
+
+		//@include res798{ padding-left: .6rem;}
+    }
+    &.num{
+        counter-reset: num;
+        li{
+            &:before{
+                counter-increment: num;
+                content: counter(num) ".";
+            }
+        }
+        &.cir{
+            li{
+                &:before{
+                    line-height:1.6rem;
+                    @include d-flex;
+                    @include align-center;
+                    @include justify-center;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    font-weight: 400;
+                    border-radius: 100%;
+                    border: 0.1px solid #555;
+                    vertical-align: middle;
+                }
+            }
+        }
+		&-square{ counter-reset: num;
+			li{ padding-left: 4.2rem;
+				&::before{ counter-increment: num; content: counter(num); top: .15rem; @include d-flex; @include align-center; @include justify-center; width: 2.6rem; height: 2.6rem; border-radius: .4rem; background-color: $color-primary-500; color: $color-realwhite; @include text-style(depth2,700,1);}
+				+ li{ margin-top: 1.6rem;}
+			}
+
+			@include res798{
+				li{ padding-left: 3.2rem; word-break: keep-all;
+					&::before{ top: 0; width: 2rem; height: 2rem; font-size: 1.5rem; line-height: 1.5rem;}
+					+ li{ margin-top: .8rem;}
+				}
+			}
+		}
+    }
+    &.dot{
+        li{ padding-left: 0.8rem;
+            &:before{
+                content:'·';
+            }
+        }
+    }
+	&.dot-center{
+		li{ display: inline-flex;
+			&:before{
+                content:'•';
+				position: relative;
+				margin-right: 0.4rem;
+            }
+		}
+	}
+    &.bar{
+        li{
+            &:before{
+                content:'-';
+            }
+        }
+    }
+	&.ko{
+        > li{
+            &:nth-child(1){
+                &::before{ content: "가.";}
+            }
+            &:nth-child(2){
+                &::before{ content: "나.";}
+            }
+            &:nth-child(3){
+                &::before{ content: "다.";}
+            }
+            &:nth-child(4){
+                &::before{ content: "라.";}
+            }
+            &:nth-child(5){
+                &::before{ content: "마.";}
+            }
+            &:nth-child(6){
+                &::before{ content: "바.";}
+            }
+            &:nth-child(7){
+                &::before{ content: "사.";}
+            }
+            &:nth-child(8){
+                &::before{ content: "아.";}
+            }
+            &:nth-child(9){
+                &::before{ content: "자.";}
+            }
+            &:nth-child(10){
+                &::before{ content: "차.";}
+            }
+            &:nth-child(11){
+                &::before{ content: "카.";}
+            }
+            &:nth-child(13){
+                &::before{ content: "타.";}
+            }
+            &:nth-child(14){
+                &::before{ content: "파.";}
+            }
+            &:nth-child(15){
+                &::before{ content: "하.";}
+            }
+        }
+    }
+}
+
+/* magin-top */
+.mt{
+    &-28{ margin-top: 2.8rem;}
+    &-40{ margin-top: 4rem;}
+    &-48{ margin-top: 4.8rem;}
+}
+
+#wrap{
+    @include pos(relative);
+}
+
+/*================================= tablet =======================================*/
+
+
+
+/*================================= responsive =======================================*/
+
+@media (min-width:260px) and (max-width:1024px){
+  html, body{
+      font-size:calc(62.5% / 1.3);
+  }
+}
+@media (min-width:360px) and (max-width:1024px){
+  html, body{
+      font-size:62.5%;
+  }
+}
+@media (min-width: 541px) and (max-width: 1024px){
+  body, html{
+    font-size: calc(62.5% * 1.1);
+  }
+}
+@media (min-width: 721px) and (max-width: 1024px){
+  body, html{
+    font-size: 62.5%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1279px){
+  body, html{
+      font-size: calc(62.5% / 1.4);
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px){
+  body, html{
+      font-size: calc(62.5% / 1.2)
+  }
+}
