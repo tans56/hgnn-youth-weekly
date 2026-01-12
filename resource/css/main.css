@@ -1,0 +1,100 @@
+#wrap {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.sec-title {
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.sec-title span:not(.date) {
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  background-color: #f19d67;
+  color: #fff;
+}
+
+.visual {
+  width: 100%;
+}
+.visual img {
+  display: block;
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.worship-list li {
+  position: relative;
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0.4rem;
+}
+.worship-list li + li {
+  border-top: 1px solid #CCCCCC;
+}
+.worship-list span {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+}
+@media (max-width: 1024px) {
+  .worship-list span {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 798px) {
+  .worship-list span {
+    font-size: 1.5rem;
+  }
+}
+.worship-list span + span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #333333;
+}
+.worship-list span:first-of-type {
+  width: 14rem;
+}
+.worship-list span:last-of-type {
+  width: 14rem;
+  text-align: right;
+}
+
+.notice-list li {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+}
+@media (max-width: 1024px) {
+  .notice-list li {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 798px) {
+  .notice-list li {
+    font-size: 1.5rem;
+  }
+}

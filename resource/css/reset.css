@@ -108,11 +108,11 @@ a:active {
 }
 
 *:focus {
-  outline-color: #001168;
+  outline-color: #070a5d;
 }
 
 .is-focus {
-  outline: 2px dashed #2348A3;
+  outline: 2px dashed #1b1f95;
   -webkit-transition: unset;
   transition: unset;
 }

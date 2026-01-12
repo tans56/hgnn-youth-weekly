@@ -1,3 +1,28 @@
 @charset 'UTF-8';
 @use 'bar' as *;
 @use 'mixin' as *;
+
+#wrap{ width: 100%; max-width: 72rem; margin: 0 auto;}
+
+.sec-title{ @include d-flex; @include align-center; @include justify-between;
+	span:not(.date){ padding: 0.8rem 1.6rem; border-radius: 999px; background-color: #f19d67; color: $color-realwhite;}
+}
+
+.visual{ width: 100%;
+	img{ display: block; width: 100%; max-width: fit-content;}
+}
+
+.worship-list{
+	li{ position: relative; @include d-flex; @include align-center; @include justify-between; padding: 1rem 0.4rem;
+		+ li{ border-top: 1px solid $color-gray-200;}
+	}
+	span{ position: relative; display: inline-block; @include text-style(depth1,500,1.6);
+		+ span{ font-size: 1.6rem; font-weight: 400; color: $color-gray-800;}
+		&:first-of-type{ width: 14rem;}
+		&:last-of-type{ width: 14rem; text-align: right;}
+	}
+}
+
+.notice-list{
+	li{ @include text-style(depth1,400,1.6);}
+}

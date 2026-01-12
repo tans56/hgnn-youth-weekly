@@ -3,3 +3,11 @@
 @use 'mixin' as *;
 
 /* footer */
+footer{ margin-top: 8rem; background-color: $color-semiblack; padding: 2.4rem; color: $color-realwhite;}
+
+.footer-info{ @include d-flex; @include align-center; @include flex-wrap; column-gap: 1.6rem; row-gap: 0.8rem;
+	.subtit_03{ color: $color-secondary-500;}
+	.address{}
+}
+
+.copyright{ display: block; margin-top: 2.4rem; padding-top: 2.3rem; border-top: 1px solid $color-gray-500; @include caption-style(depth2,400,1.6);}

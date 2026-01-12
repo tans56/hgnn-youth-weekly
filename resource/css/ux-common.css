@@ -109,11 +109,11 @@ a:active {
 }
 
 *:focus {
-  outline-color: #001168;
+  outline-color: #070a5d;
 }
 
 .is-focus {
-  outline: 2px dashed #2348A3;
+  outline: 2px dashed #1b1f95;
   -webkit-transition: unset;
   transition: unset;
 }
@@ -212,28 +212,28 @@ body.is-locked {
 
 /* 폰트 컬러 */
 .color-primary {
-  color: #2348A3;
+  color: #1b1f95;
 }
 .color-primary1 {
-  color: #87AED9;
+  color: #a2a4f0;
 }
 .color-primary2 {
-  color: #2348A3;
+  color: #1b1f95;
 }
 .color-primary3 {
-  color: #001168;
+  color: #070a5d;
 }
 .color-secondary {
-  color: #D90D66;
+  color: #ec0082;
 }
 .color-secondary1 {
-  color: #F6E3E9;
+  color: #f4cae1;
 }
 .color-secondary2 {
-  color: #D90D66;
+  color: #ec0082;
 }
 .color-secondary3 {
-  color: #A91455;
+  color: #95125a;
 }
 .color-gray {
   color: #666666;
@@ -274,28 +274,28 @@ body.is-locked {
 
 /* 배경 컬러 */
 .bg-primary {
-  background-color: #2348A3;
+  background-color: #1b1f95;
 }
 .bg-primary-300 {
-  background-color: #87AED9;
+  background-color: #a2a4f0;
 }
 .bg-primary-500 {
-  background-color: #2348A3;
+  background-color: #1b1f95;
 }
 .bg-primary-800 {
-  background-color: #001168;
+  background-color: #070a5d;
 }
 .bg-secondary {
-  background-color: #D90D66;
+  background-color: #ec0082;
 }
 .bg-secondary-300 {
-  background-color: #F6E3E9;
+  background-color: #f4cae1;
 }
 .bg-secondary-500 {
-  background-color: #D90D66;
+  background-color: #ec0082;
 }
 .bg-secondary-800 {
-  background-color: #A91455;
+  background-color: #95125a;
 }
 .bg-gray {
   background-color: #F5F5F5;
@@ -567,7 +567,7 @@ body.is-locked {
 .essential {
   position: relative;
   top: -0.8rem;
-  color: #2348A3;
+  color: #1b1f95;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.5;
@@ -627,6 +627,8 @@ body.is-locked {
 .lists.num li:before {
   counter-increment: num;
   content: counter(num) ".";
+  position: relative;
+  margin-right: 0.4rem;
 }
 .lists.num.cir li:before {
   line-height: 1.6rem;
@@ -670,7 +672,7 @@ body.is-locked {
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 0.4rem;
-  background-color: #2348A3;
+  background-color: #1b1f95;
   color: #fff;
   font-size: 1.7rem;
   font-weight: 700;
@@ -769,8 +771,14 @@ body.is-locked {
 }
 
 /* magin-top */
-.mt-28 {
-  margin-top: 2.8rem;
+.mt-8 {
+  margin-top: 0.8rem;
+}
+.mt-16 {
+  margin-top: 1.6rem;
+}
+.mt-24 {
+  margin-top: 2.4rem;
 }
 .mt-40 {
   margin-top: 4rem;
