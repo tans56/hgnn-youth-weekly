@@ -3,6 +3,7 @@
 @use 'mixin' as *;
 
 #wrap{ width: 100%; max-width: 72rem; margin: 0 auto;}
+.container{ padding: 0 1.6rem}
 
 .sec-title{ @include d-flex; @include align-center; @include justify-between;
 	span:not(.date){ padding: 0.8rem 1.6rem; border-radius: 999px; background-color: #f19d67; color: $color-realwhite;}

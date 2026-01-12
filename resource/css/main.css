@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.container {
+  padding: 0 1.6rem;
+}
+
 .sec-title {
   -ms-display: flexbox; /* IE10 */
   display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
