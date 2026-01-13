@@ -83,9 +83,18 @@ body {
 }
 
 .card h2 {
+	display:flex;
+	justify-content: space-between;
+	align-items: flex-end;
 	font-size: 16px;
 	margin-bottom: 12px;
 	letter-spacing: -0.025em;
+}
+
+.next-date{
+	font-size:13px;
+	color:#6b7280;
+	font-weight:500;
 }
 
 /* 예배 흐름 */
