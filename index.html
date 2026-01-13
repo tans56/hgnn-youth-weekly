@@ -89,58 +89,36 @@
 
 	<!-- START :: 주보 공유 -->
 	<div class="share-wrap btn-wrap txt1 keep-all-pretty">
-		<button type="button" id="kakao-link-btn" class="btn btn-full"><img src="./resource/img/icon-kakao.png" alt="카카오톡 아이콘" />카카오톡으로 공유</button>
+		<button type="button" id="kakaotalk-sharing-btn" class="btn btn-full"><img src="./resource/img/icon-kakao.png" alt="카카오톡 아이콘" />카카오톡으로 공유</button>
 		<button type="button" class="btn btn-full copyText" data-copy="https://haneulworks.github.io/hgnn-youth-weekly/"><img src="./resource/img/icon-link.png" alt="링크 아이콘" /> 온라인 주보 주소 복사하기</button>
 	</div>
 	<!-- END :: 주보 공유 -->
 
 	<button id="toTop" class="to-top" aria-label="맨 위로 이동"><img src="./resource/img/arrow-up.png" alt="화살표"></button>
 
-	
-
 	<footer class="footer">Copyright © 2026 향기나는교회 청소년부</footer>
 
 </div>
 
-<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js" crossorigin="anonymous" defer></script>
-<script defer>
-document.addEventListener('DOMContentLoaded', function () {
+<button type="button" id="kakaotalk-sharing-btn" class="btn btn-full"><img src="./resource/img/icon-kakao.png" alt="카카오톡 아이콘" />카카오톡으로 공유</button>
 
-	if (!window.Kakao) {
-		console.error('Kakao SDK not loaded');
-		return;
-	}
 
-	if (!Kakao.isInitialized()) {
-		Kakao.init('5c8e276ac66a278e925960b664548016');
-	}
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.7/kakao.min.js" integrity="sha384-tJkjbtDbvoxO+diRuDtwRO9JXR7pjWnfjfRn5ePUpl7e7RJCxKCwwnfqUAdXh53p" crossorigin="anonymous"></script>
 
-	const btn = document.getElementById('kakao-link-btn');
-	if (!btn) return;
+<script>
+  Kakao.init('5c8e276ac66a278e925960b664548016');  // 사용하려는 앱의 JavaScript 키 입력
+</script>
 
-	btn.addEventListener('click', function () {
-		Kakao.Share.sendDefault({
-		objectType: 'feed',
-		content: {
-			title: '향기나는교회 청소년부 주보 · 이번 주 말씀',
-			description: '예수님의 사랑으로 함께 예배드리는 향기나는교회 청소년부 주보입니다.',
-			imageUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/resource/img/visual.jpg',
-			link: {
-				mobileWebUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/',
-				webUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/'
+<script>
+	document.getElementById('kakaotalk-sharing-btn').addEventListener('click', function () {
+		Kakao.Share.sendCustom({
+			templateId: 127876,   // 숫자, 따옴표 X
+			templateArgs: {
+				FW: "향기나는교회 청소년부",
+				date: "2026.01.11"
 			}
-		},
-		buttons: [{
-			title: '자세히 보기',
-			link: {
-				mobileWebUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/',
-				webUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/'
-			}
-		}]
 		});
 	});
-
-});
 </script>
 
 
