@@ -155,19 +155,87 @@ body {
 	margin-bottom: 4px;
 }
 
+.share-wrap{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* 공통 버튼 */
+.btn{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:8px;
+	width:100%;
+	padding:14px 16px;
+	border-radius:14px;
+	border:none;
+	background:#ffffff;
+	font-size:15px;
+	font-weight:600;
+	letter-spacing:-0.025em;
+	cursor:pointer;
+	box-shadow:0 6px 18px rgba(0,0,0,.06);
+	color:#1f2937;
+}
+
+.btn img{
+	width:20px;
+	height:20px;
+}
+
+
 /* 지난 소식 보기 버튼 */
 .archive-btn{
 	display:block;
-	margin: 24px 0 0;
-	padding: 14px;
-	border-radius: 14px;
+	margin:24px 0 0;
+	padding:14px;
+	border-radius:14px;
 	text-align:center;
-	background:#ff8a3d;
-	color:#fff;
+	background:#ffb27a;
+	color:#7a3d00;
 	font-weight:600;
 	text-decoration:none;
 	letter-spacing:-0.025em;
-	box-shadow:0 6px 16px rgba(255,138,61,.25);
+	box-shadow:0 6px 16px rgba(255,178,122,.35);
+}
+.btn,
+.archive-btn{ transition: all 0.2s;}
+.btn:hover,
+.archive-btn:hover{
+	transform: translateY(-1px);
+	box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.copyText.copied{
+	background:#e0f2fe;
+	color:#0369a1;
+}
+
+/* 맨 위로 이동 버튼 */
+.to-top{
+	position:fixed;
+	right:16px;
+	bottom:24px;
+	width:48px;
+	height:48px;
+	border-radius:50%;
+	border:none;
+	background:#ffd2a8;
+	box-shadow:0 8px 15px rgba(255,178,122,.4);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	cursor:pointer;
+	z-index:10;
+}
+
+.to-top img{
+	width:22px;
+	height:22px;
+	filter: brightness(0) invert(1);
 }
 
 /* 푸터 */
