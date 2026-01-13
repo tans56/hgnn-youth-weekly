@@ -17,7 +17,6 @@
 <!-- js -->
 <script type="text/javascript" src="./resource/js/common.js"></script>
 
-<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js" integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -103,11 +102,24 @@
 
 </div>
 
-<script>
-Kakao.init('5c8e276ac66a278e925960b664548016');
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js" crossorigin="anonymous" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function () {
 
-document.getElementById('kakao-link-btn').addEventListener('click', function () {
-	Kakao.Share.sendDefault({
+	if (!window.Kakao) {
+		console.error('Kakao SDK not loaded');
+		return;
+	}
+
+	if (!Kakao.isInitialized()) {
+		Kakao.init('5c8e276ac66a278e925960b664548016');
+	}
+
+	const btn = document.getElementById('kakao-link-btn');
+	if (!btn) return;
+
+	btn.addEventListener('click', function () {
+		Kakao.Share.sendDefault({
 		objectType: 'feed',
 		content: {
 			title: '향기나는교회 청소년부 주보 · 이번 주 말씀',
@@ -118,18 +130,19 @@ document.getElementById('kakao-link-btn').addEventListener('click', function () 
 				webUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/'
 			}
 		},
-		buttons: [
-			{
-				title: '자세히 보기',
-				link: {
+		buttons: [{
+			title: '자세히 보기',
+			link: {
 				mobileWebUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/',
 				webUrl: 'https://haneulworks.github.io/hgnn-youth-weekly/'
-				}
 			}
-		]
+		}]
+		});
 	});
+
 });
 </script>
+
 
 </body>
 </html>
