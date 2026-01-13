@@ -66,7 +66,6 @@ section {
   background: linear-gradient(135deg, #ff8a3d, #ffd2a8);
   color: #5a2a00;
 }
-
 .hero-label {
   font-size: 1.3rem;
   font-weight: 700;
@@ -74,7 +73,6 @@ section {
   letter-spacing: -0.025em;
   opacity: 0.7;
 }
-
 .hero-title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -82,7 +80,6 @@ section {
   letter-spacing: -0.025em;
   margin: 1.4rem 0;
 }
-
 .hero-preacher {
   font-size: 1.3rem;
   font-weight: 500;
@@ -166,7 +163,7 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.4rem 1.2rem;
-  background: #F1F6FC;
+  background: #F5F6F9;
   border-radius: 0.8rem;
   font-size: 1.4rem;
   font-weight: 400;
@@ -204,7 +201,7 @@ section {
 }
 .grid div {
   padding: 1rem 1.2rem;
-  background: #F1F6FC;
+  background: #F5F6F9;
   border-radius: 0.8rem;
   font-size: 1.4rem;
   font-weight: 400;
@@ -231,15 +228,16 @@ section {
 
 /* 공유하기 */
 .share-wrap {
-  margin-top: 2.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.2rem;
+  margin-top: 2.4rem;
 }
 
 .btn {
