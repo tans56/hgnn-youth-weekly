@@ -1,0 +1,170 @@
+* { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "PretendardGOV", sans-serif; }
+
+body {
+	margin: 0;
+	background: #f9fafb;
+	color: #1f2937;
+}
+
+.app {
+	max-width: 420px;
+	margin: auto;
+	padding: 16px 16px 60px;
+}
+
+/* 비전 배너 */
+.vision {
+	margin: -16px -16px 24px;
+	border-radius: 0 0 24px 24px;
+	overflow: hidden;
+}
+
+.vision img {
+	width: 100%;
+	display: block;
+}
+
+/* 헤더 */
+.app-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.logo {
+	font-weight: 700;
+	font-size: 20px;
+	letter-spacing: -0.025em;
+}
+
+.week {
+	font-size: 14px;
+	color: #6b7280;
+	letter-spacing: -0.025em;
+}
+
+/* 말씀 카드 */
+.hero {
+	background: linear-gradient(135deg, #ff8a3d, #ffd2a8);
+	border-radius: 24px;
+	padding: 24px;
+	color: #5a2a00;
+	margin-bottom: 24px;
+}
+
+.hero-label {
+	font-size: 12px;
+	font-weight: 700;
+	opacity: 0.7;
+	letter-spacing: -0.025em;
+}
+
+.hero-title {
+	font-size: 22px;
+	line-height: 1.4;
+	margin: 10px 0;
+	letter-spacing: -0.025em;
+}
+
+.hero-meta {
+	font-size: 14px;
+	opacity: 0.8;
+	letter-spacing: -0.025em;
+}
+
+/* 카드 */
+.card {
+	background: #ffffff;
+	border-radius: 20px;
+	padding: 20px;
+	margin-bottom: 16px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+.card h2 {
+	font-size: 16px;
+	margin-bottom: 12px;
+	letter-spacing: -0.025em;
+}
+
+/* 예배 흐름 */
+.flow {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+}
+
+.flow li {
+	background: #f1f5f9;
+	border-radius: 12px;
+	padding: 10px;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: -0.025em;
+}
+
+/* 공지 */
+.notice {
+	list-style: none;
+	padding: 0;
+}
+
+.notice li {
+	padding: 10px 0;
+	border-bottom: 1px solid #e5e7eb;
+	font-size: 14px;
+	word-break: keep-all;
+	text-wrap-style: pretty;
+	letter-spacing: -0.025em;
+}
+
+.notice li:last-child {
+	border-bottom: none;
+}
+
+/* 다음주 */
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 12px;
+}
+
+.grid div {
+	background: #f1f5f9;
+	border-radius: 12px;
+	padding: 12px;
+	font-size: 14px;
+}
+
+.grid span {
+	display: block;
+	font-size: 12px;
+	color: #6b7280;
+	margin-bottom: 4px;
+}
+
+/* 지난 소식 보기 버튼 */
+.archive-btn{
+	display:block;
+	margin: 24px 0 0;
+	padding: 14px;
+	border-radius: 14px;
+	text-align:center;
+	background:#ff8a3d;
+	color:#fff;
+	font-weight:600;
+	text-decoration:none;
+	letter-spacing:-0.025em;
+	box-shadow:0 6px 16px rgba(255,138,61,.25);
+}
+
+/* 푸터 */
+.footer {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 12px;
+	color: #9ca3af;
+}

@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  background: #f9fafb;
+  font-family: -apple-system, BlinkMacSystemFont, "PretendardGOV", sans-serif;
+}
+
+.wrap {
+  max-width: 420px;
+  margin: auto;
+  padding: 16px 16px 60px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  background: #fff;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  padding: 16px;
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.list a {
+  text-decoration: none;
+  color: #1f2937;
+  display: block;
+}
+
+.date {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.back-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: #1f2937;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
