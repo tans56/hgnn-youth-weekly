@@ -75,30 +75,32 @@ body {
 
 /* 오늘의 말씀 */
 .verse {
-  background: #fff;
-  border-radius: 16px;
-  margin-bottom: 24px;
-  padding: 24px 20px;
+	background: #fff;
+	border-radius: 16px;
+	margin-bottom: 24px;
+	padding: 24px 20px;
 }
 
 .verse-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #ff8a3d;
-  margin-bottom: 12px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #ff8a3d;
+	margin-bottom: 12px;
 }
 
 .verse-text {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #222;
-  margin-bottom: 16px;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #222;
+	margin-bottom: 16px;
+	word-break: keep-all;
+	text-wrap-style: pretty;
 }
 
 .verse-ref {
-  font-size: 13px;
-  color: #777;
-  text-align: right; /* 성경 구절만 오른쪽 정렬 */
+	font-size: 13px;
+	color: #777;
+	text-align: right;
 }
 
 
@@ -193,10 +195,10 @@ body {
 }
 
 .share-wrap{
-  margin-top:24px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
+	margin-top:24px;
+	display:flex;
+	flex-direction:column;
+	gap:12px;
 }
 
 /* 공통 버튼 */
