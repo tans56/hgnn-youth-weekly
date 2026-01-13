@@ -21,7 +21,7 @@ h1 {
 }
 .archive-list li {
   background: #fff;
-  border-radius: 16px;
+  border-radius: 12px;
   margin-bottom: 12px;
   padding: 16px;
   -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
@@ -36,7 +36,7 @@ h1 {
 .date {
   font-size: 14px;
   color: #6b7280;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .title {
