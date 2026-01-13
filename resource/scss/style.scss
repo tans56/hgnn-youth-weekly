@@ -1,0 +1,113 @@
+@charset 'UTF-8';
+@use 'bar' as *;
+@use 'mixin' as *;
+
+#wrap{ max-width: 42rem; margin: auto; padding-bottom: 60px;}
+
+header,
+section{ margin: 0 1.6rem; margin-top: 2.4rem;}
+
+/* 비전 배너 */
+.vision{ overflow: hidden; margin: 0; margin-bottom: 2.4rem; border-radius: 0 0 2.4rem 2.4rem;
+	img{ display: block; width: 100%; max-width: fit-content;}
+}
+
+/* 헤더 */
+.header{ @include d-flex; @include align-end; @include justify-between; margin-top: 2rem;}
+.logo { @include subtitle-style(depth2,700,1.6);}
+.week { color: $color-gray-600; @include caption-style(depth1,400,1.6);}
+
+/* 말씀 카드 */
+.hero {
+	@include card;
+	background: linear-gradient(135deg, #ff8a3d, #ffd2a8);
+	color: #5a2a00;
+}
+
+.hero-label {
+	@include caption-style(depth2,700,1.6);
+	opacity: 0.7;
+}
+
+.hero-title {
+	@include subtitle-style(depth1,700,1.4);
+	margin: 1.4rem 0;
+}
+
+.hero-preacher {
+	@include caption-style(depth2,500,1.6);
+	opacity: 0.8;
+}
+
+/* 오늘의 말씀 */
+.verse{ @include card;
+	&-label{ color: #ff8a3d; @include caption-style(depth1,600,1.6);}
+	&-text{ margin: 1.2rem 0; color: $color-semiblack; @include text-style(depth1,500,1.7); word-break: keep-all; text-wrap-style: pretty;}
+	&-ref{ color: $color-gray-500; @include caption-style(depth1,400,1.6); text-align: right;}
+}
+
+/* 카드 */
+.card{ @include card;
+	h2{ @include d-flex; @include align-end; @include justify-between; margin-bottom: 1.6rem; @include text-style(depth1,600,1.6);}
+}
+
+
+/* 예배 흐름 */
+.flow{ @include d-grid(1.2rem);
+	li{ @include d-flex; @include justify-between; padding: 1.4rem 1.2rem; background: $color-blue-bg-20; border-radius: 0.8rem; @include caption-style(depth1,400,1.6);}
+	span{ color: $color-gray-600; @include caption-style(depth2,400,1.6);}
+}
+
+/* 공지 */
+.notice{
+	li{ padding: 1rem 0.4rem; border-bottom: 1px solid $color-gray-line; @include caption-style(depth1,400,1.6); word-break: keep-all; text-wrap-style: pretty;
+		&:last-child{ border-bottom: none;}
+	}
+}
+
+/* 다음주 */
+.grid{ @include d-grid(1.2rem);
+	div{ padding: 1rem 1.2rem; background: $color-blue-bg-20; border-radius: 0.8rem; @include caption-style(depth1,400,1.6);}
+	span{ display: block; margin-bottom: 0.4rem; color: $color-gray-600; @include caption-style(depth3,500,1.7);}
+}
+.next-date { color: $color-gray-600; @include caption-style(depth2,400,1.6); }
+
+/* 공유하기 */
+.share-wrap{
+	margin-top:2.4rem;
+	display:flex;
+	flex-direction:column;
+	gap:1.2rem;
+}
+
+// 공통 버튼
+.btn{ @include d-flex; @include align-center; @include justify-center; gap: 0.8rem; width: 100%; padding: 1.4rem 1.6rem; border-radius: 0.8rem; border: none; background: $color-realwhite; color: $color-black; @include text-style(depth2,500,1.6); box-shadow: 0 0.6rem 1.8rem rgba(0,0,0,.06); cursor: pointer; transition: all 0.2s;
+	&:hover{ transform: translateY(-1px); box-shadow: 0 0.8rem 2rem rgba(0,0,0,.08);}
+	img{ width: 2rem; height: 2rem;}
+}
+
+/* 지난 소식 보기 버튼 */
+.archive-btn{
+	background: #ffb27a;
+	color: #7a3d00;
+	box-shadow: 0 0.6rem 1.6rem rgba(255,178,122,.35);
+}
+
+// 링크 복사 되었을때 스타일
+.copyText.copied{
+	background:#e0f2fe;
+	color:#0369a1;
+}
+
+/* 탑 버튼 */
+.to-top{ position: fixed; right: 1.6rem; bottom: 2.4rem; @include d-flex; @include align-center; @include justify-center; width: 4.8rem; height: 4.8rem; border-radius: 50%; border: none; background: #ffd2a8; box-shadow: 0 0.8rem 15px rgba(255,178,122,.4); cursor: pointer; z-index: 10;
+	img{ width: 2.2rem; height: 2.2rem; filter: brightness(0) invert(1);}
+}
+
+/* 푸터 */
+.footer {
+	margin-top: 4rem;
+	text-align: center;
+	color: #9ca3af;
+	@include caption-style(depth3,400,1.7)
+}

@@ -293,20 +293,8 @@ body.is-locked {
     font-size: calc(62.5% * 1.1);
   }
 }
-@media (min-width: 721px) and (max-width: 1024px){
+@media (min-width: 769px) and (max-width: 1024px){
   body, html{
-    font-size: 62.5%;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1279px){
-  body, html{
-      font-size: calc(62.5% / 1.4);
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1440px){
-  body, html{
-      font-size: calc(62.5% / 1.2)
+    font-size: calc(62.5% * 1.2);
   }
 }

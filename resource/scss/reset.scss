@@ -19,7 +19,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'PretendardGOV', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "PretendardGOV", sans-serif;
 	font-style: normal;
     vertical-align: baseline;
 	-webkit-tap-highlight-color:transparent; /* 클릭시 하이라이트 초기화 */
@@ -39,6 +39,7 @@ html {
 
 body {
 	font-size: 1.6rem;
+	background: $color-blue-bg-10;
 	color: $color-black;
 }
 

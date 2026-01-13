@@ -78,7 +78,11 @@
 //  Grid & Flex
 // ========================================= */
 @mixin d-block { display: block; }
-@mixin d-grid { display: grid; }
+@mixin d-grid($y:null) { 
+	display: grid;
+	grid-row-gap: $y;
+	row-gap: $y;
+}
 
 @mixin d-grid-column($y, $x) {
   display: grid;
@@ -144,14 +148,6 @@
 	font-weight: $weight;
 	line-height: $line-height;
 	letter-spacing: -0.025em;
-
-	@include res1024 {
-		font-size: map.get($tit-sizes, #{$depth}-t);
-	}
-
-	@include res798 {
-		font-size: map.get($tit-sizes, #{$depth}-m);
-	}
 }
 
 @mixin subtitle-style($depth, $weight, $line-height) {
@@ -159,14 +155,6 @@
 	font-weight: $weight;
 	line-height: $line-height;
 	letter-spacing: -0.025em;
-
-	@include res1024 {
-		font-size: map.get($stit-sizes, #{$depth}-t);
-	}
-
-	@include res798 {
-		font-size: map.get($stit-sizes, #{$depth}-m);
-	}
 }
 
 @mixin text-style($depth, $weight, $line-height) {
@@ -174,14 +162,6 @@
 	font-weight: $weight;
 	line-height: $line-height;
 	letter-spacing: -0.025em;
-
-	@include res1024 {
-		font-size: map.get($txt-sizes, #{$depth}-t);
-	}
-
-	@include res798 {
-		font-size: map.get($txt-sizes, #{$depth}-m);
-	}
 }
 
 @mixin caption-style($depth, $weight, $line-height) {
@@ -189,14 +169,6 @@
 	font-weight: $weight;
 	line-height: $line-height;
 	letter-spacing: -0.025em;
-
-	@include res1024 {
-		font-size: map.get($caption-sizes, #{$depth}-t);
-	}
-
-	@include res798 {
-		font-size: map.get($caption-sizes, #{$depth}-m);
-	}
 }
 
 //* =========================================
@@ -247,4 +219,11 @@
 	clip: rect(0, 0, 0, 0) !important;
 	white-space: nowrap !important;
 	border: 0 !important;
+}
+
+@mixin card{
+	padding: 2.4rem 2rem;
+	border-radius: 1.6rem;
+	background: $color-realwhite;
+	box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.04);
 }

@@ -31,20 +31,10 @@ footer {
   margin-top: 2.4rem;
   padding-top: 2.3rem;
   border-top: 1px solid #666666;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .copyright {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 798px) {
-  .copyright {
-    font-size: 1.3rem;
-  }
 }
 
 /* 버튼 정렬 */
@@ -84,8 +74,8 @@ footer {
   border-radius: 999px;
   border: 1px solid #A2A2A2;
   background-color: #fff;
-  color: #111111;
-  font-size: 1.7rem;
+  color: #1f2937;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 4.6rem;
   letter-spacing: -0.025em;
@@ -93,34 +83,14 @@ footer {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-@media (max-width: 1024px) {
-  .btn {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 798px) {
-  .btn {
-    font-size: 1.4rem;
-  }
-}
 .btn-l {
   min-width: 9.5rem;
   height: 5.6rem;
   padding: 0 3.1rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 5.4rem;
   letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .btn-l {
-    font-size: 1.7rem;
-  }
-}
-@media (max-width: 798px) {
-  .btn-l {
-    font-size: 1.5rem;
-  }
 }
 .btn-m { /* 기본 .btn과 동일 */ }
 @media (max-width: 1024px) {
@@ -216,9 +186,9 @@ footer {
 /* === 기본 공통: 헤더/셀 === */
 .table-basic {
   width: 100%;
-  border-top: 2px solid #111111;
+  border-top: 2px solid #1f2937;
   border-collapse: collapse;
-  color: #111111;
+  color: #1f2937;
 }
 .table-basic th, .table-basic td {
   padding: 2rem 0.8rem;
@@ -240,38 +210,18 @@ footer {
   background-color: #fff;
 }
 .table-basic th {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.025em;
 }
-@media (max-width: 1024px) {
-  .table-basic th {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 798px) {
-  .table-basic th {
-    font-size: 1.4rem;
-  }
-}
 .table-basic td {
   background-color: #fff;
   color: #666666;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .table-basic td {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 798px) {
-  .table-basic td {
-    font-size: 1.4rem;
-  }
 }
 
 /* === table-row: 행기준 기본 테이블 커스텀 === */
@@ -281,7 +231,7 @@ footer {
 .table-basic.table-row th {
   background-color: #FAFAFB;
   font-weight: 400;
-  color: #111111;
+  color: #1f2937;
   vertical-align: middle;
   white-space: nowrap;
 }

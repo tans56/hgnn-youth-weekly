@@ -17,7 +17,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "PretendardGOV", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "PretendardGOV", sans-serif;
   font-style: normal;
   vertical-align: baseline;
   -webkit-tap-highlight-color: transparent; /* 클릭시 하이라이트 초기화 */
@@ -39,7 +39,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  color: #111111;
+  background: #f9fafb;
+  color: #1f2937;
 }
 
 /* h 태그들 원래 사이즈 복원 (브라우저 기본값 기준) */
@@ -351,16 +352,6 @@ body.is-locked {
   letter-spacing: -0.025em;
   letter-spacing: -0.03em;
 }
-@media (max-width: 1024px) {
-  .tit_01 {
-    font-size: 4rem;
-  }
-}
-@media (max-width: 798px) {
-  .tit_01 {
-    font-size: 3.2rem;
-  }
-}
 .tit_02 {
   font-size: 4rem;
   font-weight: 600;
@@ -368,31 +359,11 @@ body.is-locked {
   letter-spacing: -0.025em;
   letter-spacing: -0.03em;
 }
-@media (max-width: 1024px) {
-  .tit_02 {
-    font-size: 3.2rem;
-  }
-}
-@media (max-width: 798px) {
-  .tit_02 {
-    font-size: 2.8rem;
-  }
-}
 .tit_03 {
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .tit_03 {
-    font-size: 2.7rem;
-  }
-}
-@media (max-width: 798px) {
-  .tit_03 {
-    font-size: 2.6rem;
-  }
 }
 .tit_04 {
   font-size: 2.6rem;
@@ -400,146 +371,56 @@ body.is-locked {
   line-height: 1.5;
   letter-spacing: -0.025em;
 }
-@media (max-width: 1024px) {
-  .tit_04 {
-    font-size: 2.5rem;
-  }
-}
-@media (max-width: 798px) {
-  .tit_04 {
-    font-size: 2.2rem;
-  }
-}
 .tit_05 {
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.025em;
 }
-@media (max-width: 1024px) {
-  .tit_05 {
-    font-size: 2.3rem;
-  }
-}
-@media (max-width: 798px) {
-  .tit_05 {
-    font-size: 2rem;
-  }
-}
 
 .subtit_01 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+}
+.subtit_02 {
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.025em;
 }
-@media (max-width: 1024px) {
-  .subtit_01 {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 798px) {
-  .subtit_01 {
-    font-size: 1.7rem;
-  }
-}
-.subtit_02 {
+.subtit_03 {
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .subtit_02 {
-    font-size: 1.7rem;
-  }
-}
-@media (max-width: 798px) {
-  .subtit_02 {
-    font-size: 1.5rem;
-  }
-}
-.subtit_03 {
-  font-size: 1.7rem;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .subtit_03 {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 798px) {
-  .subtit_03 {
-    font-size: 1.4rem;
-  }
 }
 
 .txt_01 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .txt_01 {
-    font-size: 1.7rem;
-  }
-}
-@media (max-width: 798px) {
-  .txt_01 {
-    font-size: 1.5rem;
-  }
 }
 .txt_02 {
-  font-size: 1.7rem;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .txt_02 {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 798px) {
-  .txt_02 {
-    font-size: 1.4rem;
-  }
-}
-
-.caption_01 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .caption_01 {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 798px) {
-  .caption_01 {
-    font-size: 1.4rem;
-  }
-}
-.caption_02 {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: -0.025em;
 }
-@media (max-width: 1024px) {
-  .caption_02 {
-    font-size: 1.4rem;
-  }
+
+.caption_01 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
 }
-@media (max-width: 798px) {
-  .caption_02 {
-    font-size: 1.3rem;
-  }
+.caption_02 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
 }
 
 /* 폰트 두께 */
@@ -568,20 +449,10 @@ body.is-locked {
   position: relative;
   top: -0.8rem;
   color: #1b1f95;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .essential {
-    font-size: 1.7rem;
-  }
-}
-@media (max-width: 798px) {
-  .essential {
-    font-size: 1.5rem;
-  }
 }
 
 /* 글자 정렬 */
@@ -675,20 +546,10 @@ body.is-locked {
   border-radius: 0.4rem;
   background-color: #1b1f95;
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.025em;
-}
-@media (max-width: 1024px) {
-  .lists.num-square li::before {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 798px) {
-  .lists.num-square li::before {
-    font-size: 1.4rem;
-  }
 }
 .lists.num-square li + li {
   margin-top: 1.6rem;
@@ -809,19 +670,9 @@ body.is-locked {
     font-size: 68.75%;
   }
 }
-@media (min-width: 721px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   body, html {
-    font-size: 62.5%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1279px) {
-  body, html {
-    font-size: 44.6428571429%;
-  }
-}
-@media (min-width: 1280px) and (max-width: 1440px) {
-  body, html {
-    font-size: 52.0833333333%;
+    font-size: 75%;
   }
 }
 /* element */

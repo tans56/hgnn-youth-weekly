@@ -1,53 +1,7 @@
-body {
-  margin: 0;
-  background: #f9fafb;
-  font-family: -apple-system, BlinkMacSystemFont, "PretendardGOV", sans-serif;
-}
-
-.wrap {
-  max-width: 420px;
-  margin: auto;
-  padding: 16px 16px 60px;
-}
-
-h1 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.archive-list {
-  list-style: none;
-  padding: 0;
-}
-.archive-list li {
-  background: #fff;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  padding: 16px;
-  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-}
-.archive-list a {
-  text-decoration: none;
-  color: #1f2937;
-  display: block;
-}
-
-.date {
-  font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 10px;
-}
-
-.title {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
 .back-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  -ms-display: flexbox; /* IE10 */
+  display: -webkit-box; /* OLD iOS, Safari */ /* OLD Firefox */
+  display: -ms-flexbox; /* IE10 Tweener */ /* NEW Chrome */
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -55,14 +9,43 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 32px;
-  height: 32px;
-  margin-right: 8px;
-  margin-bottom: 16px;
-  border-radius: 10px;
-  background: #f1f5f9;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-right: 0.8rem;
+  border-radius: 0.8rem;
+  background: #fff;
   color: #1f2937;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  -webkit-box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.04);
+}
+
+.archive-list li {
+  background: #fff;
+  border-radius: 1.2rem;
+  margin-bottom: 1.2rem;
+  padding: 1.6rem;
+  -webkit-box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.04);
+}
+.archive-list a {
+  display: block;
+  color: #1f2937;
+}
+.archive-list .date {
+  margin-bottom: 0.8rem;
+  color: #6b7280;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+}
+.archive-list .title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
 }

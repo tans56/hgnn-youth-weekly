@@ -12,7 +12,7 @@
 <meta property="og:description" content="예수님의 사랑으로 함께 예배드리는 향기나는교회 청소년부 주보입니다." />
 
 <!-- css -->
-<link rel="stylesheet" href="./resource/css/reset.css">
+<link rel="stylesheet" href="./resource/css/ux-common.css">
 <link rel="stylesheet" href="./resource/css/style.css">
 
 <!-- js -->
@@ -21,62 +21,63 @@
 </head>
 <body>
 
-<div class="app">
+<div id="wrap">
 
 	<!-- 2026 비전 -->
 	<section class="vision">
 		<img src="./resource/img/visual.jpg" alt="2026년 청소년부 표어">
 	</section>
 
-	<header class="app-header">
+	<header class="header">
 		<div class="logo">향기나는교회 청소년부 Weekly</div>
-		<div class="week" id="weekDate"></div>
+		<div id="weekDate" class="week"></div>
 	</header>
 
 	<!-- 이번 주 설교 -->
 	<section class="hero">
 		<p class="hero-label">이번 주 설교</p>
-		<h1 class="hero-title" id="sermonTitle"></h1>
-		<p class="hero-preacher" id="preacher"></p>
+		<h1 id="sermonTitle" class="hero-title"></h1>
+		<p id="preacher" class="hero-preacher"></p>
 	</section>
 
 	<!-- 오늘의 말씀 -->
 	<section class="verse">
 		<p class="verse-label">오늘의 말씀</p>
 
-		<p class="verse-text" id="verseText"></p>
-		<p class="verse-ref" id="verseRef"></p>
+		<p id="verseText" class="verse-text"></p>
+		<p id="verseRef" class="verse-ref"></p>
 	</section>
 
 	<!-- 예배 순서 -->
 	<section class="card">
 		<h2>예배 순서</h2>
-		<ul class="flow" id="orderList"></ul>
+		<ul id="orderList" class="flow"></ul>
 	</section>
 
 	<!-- 공지 -->
 	<section class="card">
 		<h2>청소년부 소식</h2>
-		<ul class="notice" id="noticeList"></ul>
+		<ul id="noticeList" class="notice"></ul>
 	</section>
 
 	<!-- 다음주 -->
 	<section class="card">
 		<h2>
 			다음주 예배 위원
-			<span class="next-date" id="nextDate"></span>
+			<span id="nextDate" class="next-date"></span>
 		</h2>
-		<div class="grid" id="nextList"></div>
+		<div id="nextList" class="grid"></div>
 	</section>
 
-	<a href="./sub/list.html" class="archive-btn">지난 주보 보기</a>
+	<section>
+		<a href="./sub/list.html" class="btn archive-btn">지난 주보 보기</a>
+	</section>
 
-	<!-- START :: 주보 공유 -->
-	<div class="share-wrap btn-wrap txt1 keep-all-pretty">
+	<!-- 주보 공유 -->
+	<section class="share-wrap btn-wrap txt1 keep-all-pretty">
 		<button type="button" id="kakaotalk-sharing-btn" class="btn btn-full"><img src="./resource/img/icon-kakao.png" alt="카카오톡 아이콘" />카카오톡으로 공유</button>
 		<button type="button" class="btn btn-full copyText" data-copy="https://haneulworks.github.io/hgnn-youth-weekly/"><img src="./resource/img/icon-link.png" alt="링크 아이콘" /> 온라인 주보 링크 복사하기</button>
-	</div>
-	<!-- END :: 주보 공유 -->
+	</section>
 
 	<button id="toTop" class="to-top" aria-label="맨 위로 이동"><img src="./resource/img/arrow-up.png" alt="화살표"></button>
 

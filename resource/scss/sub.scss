@@ -2,64 +2,12 @@
 @use 'bar' as *;
 @use 'mixin' as *;
 
-body{
-	margin:0;
-	background:#f9fafb;
-	font-family:-apple-system,BlinkMacSystemFont,"PretendardGOV",sans-serif;
-}
-
-.wrap{
-	max-width:420px;
-	margin:auto;
-	padding:16px 16px 60px;
-}
-
-h1{
-	font-size:20px;
-	margin-bottom:20px;
-}
+.back-btn{ @include d-flex; @include align-center; @include justify-center; width: 3.6rem; height: 3.6rem; margin-right: 0.8rem; border-radius: 0.8rem; background: $color-realwhite; color: #1f2937; @include subtitle-style(depth3,600,1); box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.04);}
 
 .archive-list{
-	list-style:none;
-	padding:0;
-	li{
-		background:#fff;
-		border-radius:12px;
-		margin-bottom:12px;
-		padding:16px;
-		box-shadow:0 8px 20px rgba(0,0,0,.04);
-	}
-	a{
-		text-decoration:none;
-		color:#1f2937;
-		display:block;
-	}
-}
+	li{ background: $color-realwhite; border-radius: 1.2rem; margin-bottom: 1.2rem; padding: 1.6rem; box-shadow: 0 0.8rem 2rem rgba(0,0,0,.04);}
+	a{ display: block; color: $color-black;}
 
-.date{
-	font-size:14px;
-	color:#6b7280;
-	margin-bottom:10px;
-}
-
-.title{
-	font-size:16px;
-	font-weight:600;
-	letter-spacing:-0.02em;
-}
-
-.back-btn{
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	width:32px;
-	height:32px;
-	margin-right:8px;
-	margin-bottom: 16px;
-	border-radius:10px;
-	background:#f1f5f9;
-	color:#1f2937;
-	text-decoration:none;
-	font-size:18px;
-	font-weight:700;
+	.date{ margin-bottom: 0.8rem; color: #6b7280; @include caption-style(depth1,400,1.6);}
+	.title{ @include text-style(depth1,600,1.6);}
 }

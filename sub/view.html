@@ -4,55 +4,57 @@
 <meta charset="UTF-8">
 <title>HGNN Youth · Weekly</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../resource/css/reset.css">
+<link rel="stylesheet" href="../resource/css/ux-common.css">
 <link rel="stylesheet" href="../resource/css/style.css">
 <link rel="stylesheet" href="../resource/css/sub.css">
 </head>
 <body>
 
-<div class="app">
-	<a href="../sub/list.html" class="back-btn"
+<div id="wrap">
+	<section>
+		<a href="../sub/list.html" class="back-btn"
 		onclick="if(history.length > 1){ history.back(); return false; }">←</a>
+	</section>
 
-	<header class="app-header">
+	<header class="header">
 		<div class="logo">향기나는교회 청소년부 Weekly</div>
-		<div class="week" id="weekDate"></div>
+		<div id="weekDate" class="week"></div>
 	</header>
 
 	<!-- 이번 주 설교 -->
 	<section class="hero">
 		<p class="hero-label">이번 주 설교</p>
-		<h1 class="hero-title" id="sermonTitle"></h1>
-		<p class="hero-preacher" id="preacher"></p>
+		<h1 id="sermonTitle" class="hero-title"></h1>
+		<p id="preacher" class="hero-preacher"></p>
 	</section>
 
 	<!-- 오늘의 말씀 -->
 	<section class="verse">
 		<p class="verse-label">오늘의 말씀</p>
 
-		<p class="verse-text" id="verseText"></p>
-		<p class="verse-ref" id="verseRef"></p>
+		<p id="verseText" class="verse-text"></p>
+		<p id="verseRef" class="verse-ref"></p>
 	</section>
 
 	<!-- 예배 순서 -->
 	<section class="card">
 		<h2>예배 순서</h2>
-		<ul class="flow" id="orderList"></ul>
+		<ul id="orderList" class="flow"></ul>
 	</section>
 
 	<!-- 공지 -->
 	<section class="card">
 		<h2>청소년부 소식</h2>
-		<ul class="notice" id="noticeList"></ul>
+		<ul id="noticeList" class="notice"></ul>
 	</section>
 
 	<!-- 다음주 -->
 	<section class="card">
 		<h2>
 			다음주 예배 위원
-			<span class="next-date" id="nextDate"></span>
+			<span id="nextDate" class="next-date"></span>
 		</h2>
-		<div class="grid" id="nextList"></div>
+		<div id="nextList" class="grid"></div>
 	</section>
 </div>
 
