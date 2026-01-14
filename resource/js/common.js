@@ -2,14 +2,13 @@
 fetch('./data/weekly.json')
   .then(res => res.json())
   .then(data => {
-    const today = new Date();
     const weeks = data.weeks;
 
-    // 날짜 내림차순 정렬 (최신이 맨 위)
+    // 날짜 내림차순 (최신 → 과거)
     weeks.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // 오늘보다 작거나 같은 가장 최신 주 찾기
-    let current = weeks.find(w => new Date(w.date) <= today) || weeks[0];
+    // 항상 최신 주보 표시
+    const current = weeks[0];
 
     renderMain(current);
   });
