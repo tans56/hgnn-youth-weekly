@@ -148,7 +148,7 @@ section {
   letter-spacing: -0.025em;
 }
 
-/* 예배 흐름 */
+/* 예배 순서 */
 .flow {
   display: grid;
   grid-row-gap: 1.2rem;
@@ -170,7 +170,7 @@ section {
   line-height: 1.6;
   letter-spacing: -0.025em;
 }
-.flow span {
+.flow .who {
   color: #545456;
   font-size: 1.3rem;
   font-weight: 400;
@@ -208,7 +208,7 @@ section {
   line-height: 1.6;
   letter-spacing: -0.025em;
 }
-.grid span {
+.grid .title {
   display: block;
   margin-bottom: 0.4rem;
   color: #545456;

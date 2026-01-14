@@ -43,15 +43,14 @@ function renderMain(w) {
 }
 
 function renderOrder(order) {
-  const ul = document.getElementById('orderList');
-  ul.innerHTML = '';
+  document.querySelectorAll('#orderList .who').forEach(el => {
+    const key = el.dataset.key;
+    const value = order[key];
 
-  order.forEach(item => {
-    const li = document.createElement('li');
-    li.innerHTML = `${item.title} <span>${item.who}</span>`;
-    ul.appendChild(li);
+    el.textContent = value && value.trim() ? value : '다같이';
   });
 }
+
 
 function renderNotice(notice) {
   const ul = document.getElementById('noticeList');
@@ -67,13 +66,11 @@ function renderNotice(notice) {
 function renderNext(next) {
   document.getElementById('nextDate').textContent = format(next.date);
 
-  const grid = document.getElementById('nextList');
-  grid.innerHTML = '';
+  document.querySelectorAll('#nextList .who').forEach(el => {
+    const key = el.dataset.key;
+    const value = next.members[key];
 
-  next.members.forEach(m => {
-    const div = document.createElement('div');
-    div.innerHTML = `<span>${m.role}</span>${m.name}`;
-    grid.appendChild(div);
+    el.textContent = value && value.trim() ? value : '-';
   });
 }
 

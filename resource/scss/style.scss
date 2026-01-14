@@ -37,10 +37,10 @@ section{ margin: 0 1.6rem; margin-top: 2.4rem;}
 }
 
 
-/* 예배 흐름 */
+/* 예배 순서 */
 .flow{ @include d-grid(1.2rem);
 	li{ @include d-flex; @include justify-between; padding: 1.4rem 1.2rem; background: $color-blue-bg-10; border-radius: 0.8rem; @include caption-style(depth1,400,1.6);}
-	span{ color: $color-gray-600; @include caption-style(depth2,400,1.6);}
+	.who{ color: $color-gray-600; @include caption-style(depth2,400,1.6);}
 }
 
 /* 공지 */
@@ -53,7 +53,7 @@ section{ margin: 0 1.6rem; margin-top: 2.4rem;}
 /* 다음주 */
 .grid{ @include d-grid(1.2rem);
 	div{ padding: 1rem 1.2rem; background: $color-blue-bg-10; border-radius: 0.8rem; @include caption-style(depth1,400,1.6);}
-	span{ display: block; margin-bottom: 0.4rem; color: $color-gray-600; @include caption-style(depth3,500,1.7);}
+	.title{ display: block; margin-bottom: 0.4rem; color: $color-gray-600; @include caption-style(depth3,500,1.7);}
 }
 .next-date{ color: $color-gray-600; @include caption-style(depth2,400,1.6);}
 
