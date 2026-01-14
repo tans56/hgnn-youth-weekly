@@ -179,7 +179,11 @@ section {
 }
 
 /* 팝업 - 사도신경, 주기도문 */
+.pop-trigger {
+  cursor: pointer;
+}
 .pop-content {
+  cursor: auto;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
