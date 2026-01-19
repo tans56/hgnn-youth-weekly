@@ -186,11 +186,18 @@
 
 <script>
 	document.getElementById('kakaotalk-sharing-btn').addEventListener('click', function () {
+
+	// 🔥 매주 이 날짜만 바꿔주세요
+    const version = '20260125';
+
+    const shareUrl = 'https://haneulworks.github.io/hgnn-youth-weekly/index.html?v=' + version;
+
 		Kakao.Share.sendCustom({
 			templateId: 127876, // 숫자만 입력
 			templateArgs: {
 				FW: "향기나는교회 청소년부",
-				date: "2026.01.11"
+				date: "2026.01.25",
+				URL: shareUrl   // 👈 템플릿 안의 #{URL} 변수에 전달
 			}
 		});
 	});
