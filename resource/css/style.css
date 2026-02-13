@@ -386,8 +386,8 @@ section {
 
 /* 지난 소식 보기 버튼 */
 .archive-btn {
-  background: #ffb27a;
-  color: #7a3d00;
+  background: #ffd2a8;
+  color: #6e3801;
   -webkit-box-shadow: 0 0.6rem 1.6rem rgba(255, 178, 122, 0.35);
           box-shadow: 0 0.6rem 1.6rem rgba(255, 178, 122, 0.35);
 }

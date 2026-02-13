@@ -2,7 +2,10 @@
 @use 'bar' as *;
 @use 'mixin' as *;
 
-.back-btn{ @include d-flex; @include align-center; @include justify-center; width: 3.6rem; height: 3.6rem; margin-right: 0.8rem; border-radius: 0.8rem; background: $color-realwhite; color: #1f2937; @include subtitle-style(depth3,600,1); box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.04);}
+header{ position: relative;
+	h1{ display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+}
+.back-btn{ display: inline-flex; @include align-center; @include justify-center; width: 3.6rem; height: 3.6rem; margin-right: 0.8rem; border-radius: 0.8rem; background: $color-realwhite; color: #1f2937; @include subtitle-style(depth3,600,1); box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.04);}
 
 .archive-list{
 	li{ background: $color-realwhite; border-radius: 1.2rem; margin-bottom: 1.2rem; padding: 1.6rem; box-shadow: 0 0.8rem 2rem rgba(0,0,0,.04);}
@@ -10,4 +13,30 @@
 
 	.date{ margin-bottom: 0.8rem; color: #6b7280; @include caption-style(depth1,400,1.6);}
 	.title{ @include text-style(depth1,600,1.6);}
+}
+
+.btn-more{ @include d-flex; @include align-center; @include justify-center; gap: .8rem; margin: 0 auto; margin-top: 2.4rem; padding: 1.6rem 2.8rem; border-radius: 1.2rem; background-color: #ffd2a8; color: #6e3801; @include text-style(depth1,600,1); text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,.06); cursor: pointer;
+	&:hover{ background: #F9FAFB;
+		.icon-plus{ transform: rotate(-180deg);}
+	}
+	&:active{ transform: translateY(1px);
+		.icon-plus{ transform: rotate(-180deg);}
+	}
+	&:focus-visible { outline: 2px solid #3B82F6; outline-offset: 2px;}
+
+	.icon{ display: inline-flex; @include align-center; @include justify-center; width: 1.8rem; height: 1.8rem;
+		// 아이콘 색상
+        background-color: $color-black;
+
+        // 아이콘 SVG를 마스크로 사용
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;
+
+		&-plus { background-color: #6e3801; mask-image: url('../img/icon-plus.svg'); -webkit-mask-image: url('../img/icon-plus.svg'); transition: 0.2s ease-in-out;}
+	}
 }
